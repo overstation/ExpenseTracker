@@ -191,9 +191,6 @@ def edit_post(expense_id):
     flash("Expense update", "success")
     return redirect(url_for("index"))
 
-
-    return render_template("edit.html", expense=e, category=CATEGORIES, today=dt_date.today().isoformat())
-
 @app.route("/export.csv")
 def export_csv():
     start_str = (request.args.get('start') or "").strip()

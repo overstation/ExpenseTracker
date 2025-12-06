@@ -33,9 +33,12 @@
         <span class="mb-1 block text-slate-300">Category</span>
         <select name="category"
                 class="w-full rounded-xl bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100">
-          {% for c in categories %}
-            <option value="{{ c }}" {% if expense.category == c %}selected{% endif %}>{{ c }}</option>
-          {% endfor %}
+                {% for c in category %}
+                <option value="{{ c }}"
+                        {% if expense.category == c %}
+                        selected {% endif %}
+                >{{ c }}</option>
+                {% endfor %}
         </select>
       </label>
 
